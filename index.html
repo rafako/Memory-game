@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da memória</title>
+    <link rel="stylesheet" href="./src/styles/reset.css">
+    <link rel="stylesheet" href="./src/styles/main.css">
+    <link rel="shortcut icon" type="imagex/png" href="./src/images/ico.png">
+</head>
+
+<body>
+    <main>
+        <h2>Jogo da memória</h2>
+        <h3 class="score-board">Pontuação: <span id="score">0</span></h3>
+        <div class="game"></div>
+        <button class="reset" onclick="window.location.reload()">RESET GAME</button>
+    </main>
+
+    <script src="./src/scripts/engine.js" defer></script>
+</body>
+
+</html>
