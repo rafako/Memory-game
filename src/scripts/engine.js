@@ -8,12 +8,14 @@ let score = 0;
 const congratulations = 200
 let shuffleEmojis = emojis.sort(() => (Math.random() > 0.5 ? 2 : -1));
 
-for (let i = 0; i < emojis.length; i++) {
+let i = 0;
+while (i < emojis.length) {
     let box = document.createElement("div");
     box.className = "item";
     box.innerHTML = shuffleEmojis[i];
     box.onclick = handleClick;
-    document.querySelector(".game").appendChild(box)
+    document.querySelector(".game").appendChild(box);
+    i++;
 }
 
 function playSound(audioName) {
@@ -53,12 +55,13 @@ function checkMatch() {
     }
 }
 
+const scoreDisplay = document.getElementById("score");
+
 function updateScore() {
     score += 1;
-    const scoreDisplay = document.getElementById("score");
     if (scoreDisplay) {
         scoreDisplay.innerText = score;
-        playSound("points")
+        playSound("points");
     }
 }
 
